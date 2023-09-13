@@ -7,13 +7,21 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class DemoApplication {
+	
+	public static  Logger log4j = LoggerFactory.getLogger(DemoApplication.class);
+	public int sum  = 0;
+	
 
+	public void initt() {
+		
+		log4j.info("Inside the demoApplicatio class");
+	}
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 		
-		Logger log4j = LoggerFactory.getLogger(DemoApplication.class);
 		log4j.info("This is Jenkins testimonial");
 		log4j.info("This is Jenkins test1");
+		//sum =9;
+		
 	}
-
 }
